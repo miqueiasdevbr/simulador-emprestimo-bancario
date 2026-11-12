@@ -1,0 +1,122 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+    border: none;
+}
+
+:root {
+  /* Marca e Navegação */
+  --cor-titulos: #0F172A;        /* Títulos principais e header */
+  --cor-botao: #2563EB; /* Botão principal (CTA) e links */
+
+  /* Status Financeiro */
+  --cor-aprovado: #16A34A;        /* Crédito aprovado e simulação OK */
+  --cor-analise: #D97706;        /* Em análise e alertas de juros */
+  --cor-erro: #DC2626;          /* Empréstimo recusado e erros */
+
+  /* Neutras e Estrutura */
+  --cor-fundo: #F8FAFC;             /* Fundo da página */
+  --cor-container: #F1F5F9;
+  --cor-campos-form: #FFFFFF;        /* Cards, modais e campos de formulário */
+  --cor-texto: #1E293B;      /* Texto principal e labels */
+  --cor-placeholder: #64748B;     /* Textos secundários e placeholders */
+  --cor-borda: #E2E8F0;         /* Bordas de inputs e divisores */
+}
+
+body {
+    height: 100vh;
+    width: 100vw;
+    background-color: var(--cor-fundo);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    }
+
+h1 {
+    color: var(--cor-titulos);
+}
+
+.container {
+    display: flex;
+}
+
+.formulario, .mostrar {
+    width: 350px;
+    min-height: 280px;
+    background-color: var(--cor-container);
+}
+
+.formulario {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 10px;
+    padding: 20px;
+    border-radius: 5px;
+}
+
+.mostrar {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.tela {
+    background-color: var(--cor-campos-form);
+    margin: auto;
+    padding: 20px;
+    width: 300px;
+    min-height: 240px;
+    border: 1px solid var(--cor-borda);
+}
+
+.en {
+    display: flex;
+    flex-direction: column;
+    gap: 3px;
+}
+
+label {
+    color: var(--cor-texto);
+}
+
+input, select {
+    background-color: var(--cor-campos-form);
+    color: var(--cor-texto);
+    border: 1px solid var(--cor-borda);
+}
+
+input {
+    height: 30px;
+    padding-left: 20px;
+    outline: none;
+}
+
+select {
+    height: 30px;
+}
+
+input::placeholder {
+    color: var(--cor-placeholder);
+}
+
+#btn-simular {
+    background-color: var(--cor-botao);
+    height: 30px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+#btn-simular:hover {
+    opacity: 0.85;
+}
+
+p {
+    color: var(--cor-texto);
+    margin-bottom: 15px;
+}

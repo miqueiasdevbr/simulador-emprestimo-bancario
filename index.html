@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simulador de empréstimo bancário | JS</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>Simulador de empréstimo bancário</h1>
+    <div class="container">
+        <div class="formulario">
+        <div class="en">
+            <label for="valor">Valor do empréstimo: </label>
+            <input type="number" id="valor" placeholder="R$0,00" step="0.01" required>
+        </div>
+
+        <div class="en">
+            <label for="score">Score de crédito: </label>
+            <input type="number" id="score" required>
+        </div>
+
+        <div class="en">
+            <label for="parcelas">Quantidade de parcelas: </label>
+            <select name="" id="parcelas">
+                <script>
+                    for (let contador = 1; contador <= 60; contador++) {
+                        if (contador < 10) {
+                            document.write(`<option value='${contador}' id='p${contador}'>0${contador} Parcela</option>`);
+                        }else {
+                            document.write(`<option value='${contador}' id='p${contador}'>${contador} Parcela</option>`);
+                        }
+                    }
+                </script>
+            </select>
+        </div>
+
+        
+
+        <button id="btn-simular">Simular empréstimo</button>
+    </div>
+    <div class="mostrar">
+        <div class="tela"></div>
+    </div>
+    </div>
+    <script type="module" src="script.js"></script>
+    <!-- <script type="module" src="funcoes.js"></script> -->
+</body>
+</html>
